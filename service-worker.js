@@ -45,4 +45,8 @@ self.addEventListener('fetch', event => {
     caches.match(event.request)
       .then(cached => {
         if (cached) return cached;
-        return fetch(ev
+        return fetch(event.request);
+      })
+  );
+});
+

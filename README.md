@@ -1,73 +1,29 @@
 # Smart Pill Reminder
 
-A simple web app to help doctors set medicine reminders for patients and notify patients at the right time. Includes caretaker notifications and alarm sound.
-
----
+A simple Progressive Web App (PWA) that helps doctors set medication reminders for patients and reminds patients when to take their medicine.
 
 ## Features
 
-- Doctor login to add medication reminders by patient ID and time.
-- Patient login to receive medicine reminders with alerts.
-- Local storage of reminders per patient.
-- SMS simulation in console logs (for patient and caretaker).
-- Alarm sound on reminder.
-- Service Worker support for offline usage.
+- Doctor and Patient login roles
+- Doctors can add multiple medicine reminders for patients
+- Reminders stored locally with browser `localStorage`
+- Patient receives alerts with sound when it's time for medication
+- Service worker caches app files for offline usage
+- App manifest enables installation on devices with home screen icon
+
+## Setup
+
+1. Clone or download the repo
+2. Place `icon-192.png` and `icon-512.png` inside the `icons` folder
+3. Open `index.html` in a modern browser or serve it via a static server
+4. Register as a Doctor or Patient and start using
+
+## Notes
+
+- Reminders are stored locally and work only in the browser
+- Service worker enables offline support
+- Alarm sound is loaded from Google Actions sound library
 
 ---
 
-## Setup Instructions
-
-1. Clone or download this repo:
-
-   ```bash
-   git clone https://github.com/ezhil-bot/123.git
-   cd 123
-   ```
-
-2. Create a `screenshots` folder in the root directory and add the following images:
-
-   - `login.png`
-   - `doctor.png`
-   - `patient.png`
-
-   These images are used in the README and app UI.
-
-3. Open `index.html` in your browser to start using the app.
-
----
-
-## Usage
-
-- Select role (Doctor or Patient) and enter your ID.
-- Doctors can add reminders specifying patient ID, time, dosage, and phone numbers.
-- Patients will receive alerts at the reminder times.
-- Caretaker and patient SMS reminders are logged to the console.
-
----
-
-## Screenshots
-
-| Login Screen | Doctor Dashboard | Patient Dashboard |
-|--------------|------------------|-------------------|
-| ![Login](./screenshots/login.png) | ![Doctor](./screenshots/doctor.png) | ![Patient](./screenshots/patient.png) |
-
----
-
-## Technologies Used
-
-- HTML, CSS, JavaScript
-- Service Workers for offline functionality
-- LocalStorage for data persistence
-
----
-
-## License
-
-MIT License
-
----
-
-## Contact
-
-Created by Ezhilarasan M T.  
-Feel free to reach out for improvements or questions.
+Made by Ezhilarasan M T
