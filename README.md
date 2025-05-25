@@ -1,103 +1,73 @@
-# 💊 Smart Pill Reminder
+# Smart Pill Reminder
 
-A simple Progressive Web App (PWA) to help doctors schedule pill reminders for patients, and notify them when it's time to take their medicine — complete with audio alarms and local storage support.
-
----
-
-## 🚀 Features
-
-- 👨‍⚕️ **Doctor Dashboard** to add medicine reminders for patients  
-- 👩‍⚕️ **Patient Dashboard** to receive timely alerts  
-- 🔔 Local audio alert when it's time to take medicine  
-- 📦 **LocalStorage-based** data storage (no backend required)  
-- ⚙️ Works **offline** with Service Worker support  
-- 📱 Installable as a **PWA** (Add to Home Screen)  
-- 🎨 Simple and responsive UI  
+A simple web app to help doctors set medicine reminders for patients and notify patients at the right time. Includes caretaker notifications and alarm sound.
 
 ---
 
-## 📸 Screenshots
+## Features
 
-| Login Screen | Doctor Panel | Patient Panel |
-|--------------|--------------|----------------|
+- Doctor login to add medication reminders by patient ID and time.
+- Patient login to receive medicine reminders with alerts.
+- Local storage of reminders per patient.
+- SMS simulation in console logs (for patient and caretaker).
+- Alarm sound on reminder.
+- Service Worker support for offline usage.
+
+---
+
+## Setup Instructions
+
+1. Clone or download this repo:
+
+   ```bash
+   git clone https://github.com/ezhil-bot/123.git
+   cd 123
+   ```
+
+2. Create a `screenshots` folder in the root directory and add the following images:
+
+   - `login.png`
+   - `doctor.png`
+   - `patient.png`
+
+   These images are used in the README and app UI.
+
+3. Open `index.html` in your browser to start using the app.
+
+---
+
+## Usage
+
+- Select role (Doctor or Patient) and enter your ID.
+- Doctors can add reminders specifying patient ID, time, dosage, and phone numbers.
+- Patients will receive alerts at the reminder times.
+- Caretaker and patient SMS reminders are logged to the console.
+
+---
+
+## Screenshots
+
+| Login Screen | Doctor Dashboard | Patient Dashboard |
+|--------------|------------------|-------------------|
 | ![Login](./screenshots/login.png) | ![Doctor](./screenshots/doctor.png) | ![Patient](./screenshots/patient.png) |
 
 ---
 
-## 🛠️ Technologies Used
+## Technologies Used
 
-- HTML5, CSS3, JavaScript (Vanilla)
-- [Service Worker](https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API)
-- PWA (Manifest + Icons)
-- LocalStorage API
-
----
-
-## 📂 Project Structure
-
-```
-smart-pill-reminder/
-│
-├── index.html
-├── style.css
-├── app.js
-├── manifest.json
-├── service-worker.js
-├── icons/
-│   ├── icon-192.png
-│   └── icon-512.png
-└── screenshots/
-    ├── login.png
-    ├── doctor.png
-    └── patient.png
-```
+- HTML, CSS, JavaScript
+- Service Workers for offline functionality
+- LocalStorage for data persistence
 
 ---
 
-## 🔧 Setup & Run
+## License
 
-1. **Clone this repository:**
-
-```bash
-git clone https://github.com/yourusername/smart-pill-reminder.git
-cd smart-pill-reminder
-```
-
-2. **Open `index.html` in your browser.**  
-   Optionally, you can serve it via a local server:
-
-```bash
-npx serve .
-```
-
-3. ✅ Done! Use it as a doctor or patient.
+MIT License
 
 ---
 
-## 📱 Add to Home Screen (PWA)
+## Contact
 
-- Open the app in a mobile browser (e.g., Chrome).
-- Click the “Add to Home Screen” prompt.
-- Use it like a native app.
-
----
-
-## ⚠️ Limitations
-
-- Reminders are stored **locally**; not synced between devices.
-- No backend; data will reset if browser storage is cleared.
-
----
-
-## 🙌 Acknowledgments
-
-- Google Material Icons & Sounds  
-- MDN Web Docs  
-- Open Source inspiration from PWA community  
-
----
-
-## 📃 License
-
-MIT License  
-© 2025 [Your Name]
+Created by Ezhilarasan M T.  
+Feel free to reach out for improvements or questions.
