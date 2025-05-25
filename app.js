@@ -1,3 +1,23 @@
+function login() {
+  const role = document.getElementById('role').value;
+  const id = document.getElementById('id').value.trim();
+
+  if (!id) {
+    alert("Please enter your ID.");
+    return;
+  }
+
+  if (role === "doctor") {
+    document.getElementById('doctor-panel').classList.remove('hidden');
+    document.getElementById('patientId').focus(); // Focus for quick entry
+  } else {
+    document.getElementById('patient-panel').classList.remove('hidden');
+    startReminderCheck(id);
+  }
+
+  document.getElementById('login-section').classList.add('hidden');
+}
+
 function addReminder() {
   const patientId = document.getElementById('patientId').value.trim();
   const time = document.getElementById('time').value;
@@ -13,24 +33,4 @@ function addReminder() {
   const formattedTime = formatTimeAMPM(time);
   const reminder = { time: formattedTime, dosage };
 
-  let existing = JSON.parse(localStorage.getItem(`reminder-${patientId}`)) || [];
-  existing.push(reminder);
-  localStorage.setItem(`reminder-${patientId}`, JSON.stringify(existing));
-
-  alert(`Reminder set for ${formattedTime} with dosage "${dosage}".`);
-
-  console.log(`📩 SMS to ${phone}: Take ${dosage} at ${formattedTime}`);
-  console.log(`📩 SMS to caretaker ${caretaker}: Patient ${patientId} - ${dosage} at ${formattedTime}`);
-
-  displayReminders(existing, "reminder-list");
-
-  // Clear inputs after adding reminder
-  document.getElementById('patientId').value = '';
-  document.getElementById('time').value = '';
-  document.getElementById('dosage').value = '';
-  document.getElementById('phone').value = '';
-  document.getElementById('caretaker').value = '';
-
-  // Set focus back to patientId input
-  document.getElementById('patientId').focus();
-}
+  let existing = JSON
