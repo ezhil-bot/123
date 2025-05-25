@@ -1,87 +1,76 @@
-# 💊 Smart Pill Reminder App (PWA)
 
-A modern and easy-to-use Progressive Web App (PWA) that allows doctors to set multiple medication reminders for patients. Patients receive alerts with dosage, offline support, and even alarm sounds. Installable and reliable, just like a native app.
+# 💊 Smart Pill Reminder
 
-🔗 **Live App**: [https://ezhil-bot.github.io/123](https://ezhil-bot.github.io/123)
+A simple, browser-based Progressive Web App (PWA) that helps doctors set medication reminders for patients, and alerts patients when it's time to take their pills.
 
----
-
-## 🏠 Screens – At a Glance
-
-### 🧪 Home Screen
-- Select login role: Doctor or Patient
-- Enter your unique ID
-
-### 👨‍⚕️ Doctor Dashboard
-- Enter Patient ID, reminder time, dosage, phone number, caretaker number
-- Add multiple reminders with different times and doses
-- View a list of reminders assigned to patient
-
-### 👤 Patient Dashboard
-- View all active reminders
-- When time matches, alarm rings and alert shows dosage
-- Works offline using service workers
-
-### ⚙️ Settings & PWA Features
-- Add to Home Screen (Android/iOS/PC)
-- Works even without internet
-- Stores data using localStorage
-- Auto alert checks every minute
-- Auto plays alarm sound when it's time
+Live Demo 👉 [Smart Pill Reminder](https://ezhil-bot.github.io/123)
 
 ---
 
-## 📷 Screenshots
+## 📦 Features
 
-> (Upload screenshots in GitHub → Issues → Drag + Copy the image URL here)
-
-
----
-
-## 🔧 Tech Stack
-
-- HTML5
-- CSS3
-- JavaScript (Vanilla)
-- Service Workers (for offline mode)
-- PWA manifest
-- GitHub Pages (for free hosting)
+- 👨‍⚕️ Doctor and patient login
+- ⏰ Reminder scheduling with time and dosage
+- 🔔 Patient gets alert with sound when it’s time for medicine
+- 💾 Data stored locally using `localStorage`
+- 📱 Works offline (PWA support with service worker)
 
 ---
 
-## 🚀 How to Use It
+## 🛠️ How to Use
 
-1. Visit: [https://ezhil-bot.github.io/123](https://ezhil-bot.github.io/123)
-2. Choose your role: Doctor / Patient
-3. For Doctor:
-   - Set reminder time, dosage, patient and caretaker info
-4. For Patient:
-   - View reminders and receive alerts when it’s time
-5. Install the app:
-   - On mobile Chrome → “Add to Home Screen”
-   - Or install from browser address bar (desktop)
+1. **Doctor Login**
+   - Choose "Doctor" from the dropdown
+   - Enter any ID and click "Login"
+   - Fill patient details, time, dosage, and contact info
+   - Click ➕ Add Reminder
 
----
-
-## 📂 File Structure
-
-| File               | Purpose                              |
-|--------------------|---------------------------------------|
-| `index.html`       | UI for both doctor and patient        |
-| `style.css`        | Responsive layout and theme           |
-| `app.js`           | Handles logic, reminders, alarms      |
-| `manifest.json`    | Metadata for PWA installation         |
-| `service-worker.js`| Caches app files for offline use      |
-| `icon.png`         | App icon for home screen installation |
+2. **Patient Login**
+   - Choose "Patient" from the dropdown
+   - Enter the same Patient ID used by doctor
+   - Patient will see reminders and get alerts when it's time
 
 ---
 
-## 🙌 Creator
+## 🚀 How to Run Locally
 
-Made with ❤️ by [@ezhil-bot](https://github.com/ezhil-bot)
+1. Clone this repo:
+   ```bash
+   git clone https://github.com/ezhil-bot/123.git
+   cd 123
+   ```
+
+2. Open `index.html` in your browser.
+
+3. Optional: To run as a local PWA, use a local server:
+   ```bash
+   npx serve .
+   ```
 
 ---
 
-## 📜 License
+## 🧾 Project Structure
 
-MIT License – Free to use, modify, and share.
+```
+📁 root/
+├── index.html            # Main HTML UI
+├── app.js                # JavaScript logic
+├── style.css             # Basic styling
+├── service-worker.js     # For offline support
+├── manifest.json         # PWA metadata
+└── icon.png              # App icon
+```
+
+---
+
+## 📦 Built With
+
+- HTML5, CSS3, Vanilla JavaScript
+- `localStorage` for reminder storage
+- PWA features: service worker, manifest, offline support
+
+---
+
+## 📄 License
+
+This project is open source and available under the [MIT License](LICENSE).
